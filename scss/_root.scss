@@ -1,13 +1,21 @@
 // OUDS mod
 #{$ouds-root-selector},
 [data-bs-theme] {
+<<<<<<< HEAD
   color: var(--#{$prefix}color-content-default);
+=======
+  color: var(--#{$prefix}body-color);
+>>>>>>> b6707fcd3 (feat:  button component implementation (squashed))
 }
 
 // Note that some of the following variables in `#{$ouds-root-selector}, [data-bs-theme="light"]` could be extracted into `#{$ouds-root-selector}` only selector since they are not modified by other color modes!
 // End mod
 
+<<<<<<< HEAD
 @include color-mode(light, true) { // OUDS mod: instead of `:root, [data-bs-theme="light"]`
+=======
+@include color-mode(light, true) {
+>>>>>>> b6707fcd3 (feat:  button component implementation (squashed))
   color-scheme: light; // OUDS mod
 
   // Note: Custom variable values only support SassScript inside `#{}`.
@@ -256,19 +264,29 @@
     --#{$prefix}link-hover-decoration: #{$link-hover-decoration};
   }
 
+<<<<<<< HEAD
   @if $enable-bootstrap-compatibility {
     --#{$prefix}code-color: #{$code-color};
     --#{$prefix}highlight-color: #{$mark-color};
     --#{$prefix}highlight-bg: #{$mark-bg};
   }
+=======
+  --#{$prefix}code-color: #{$code-color};
+  --#{$prefix}highlight-color: #{$mark-color};
+  --#{$prefix}highlight-bg: #{$mark-bg};
+>>>>>>> b6707fcd3 (feat:  button component implementation (squashed))
 
   // scss-docs-start root-border-var-ouds
   --#{$prefix}border-width: #{$border-width};
   --#{$prefix}border-style: #{$border-style};
   --#{$prefix}border-color: #{$border-color};
+<<<<<<< HEAD
   @if $enable-bootstrap-compatibility {
     --#{$prefix}border-color-translucent: #{$border-color-translucent};
   }
+=======
+  --#{$prefix}border-color-translucent: #{$border-color-translucent};
+>>>>>>> b6707fcd3 (feat:  button component implementation (squashed))
   // scss-docs-end root-border-var-ouds
 
   // OUDS mod
@@ -496,6 +514,7 @@
     --#{$prefix}link-color-rgb: #{to-rgb($link-color-dark)};
     --#{$prefix}link-hover-color-rgb: #{to-rgb($link-hover-color-dark)};
 
+<<<<<<< HEAD
     @if $enable-bootstrap-compatibility {
       --#{$prefix}code-color: #{$code-color-dark};
       --#{$prefix}highlight-color: #{$mark-color-dark};
@@ -506,6 +525,14 @@
     @if $enable-bootstrap-compatibility {
       --#{$prefix}border-color-translucent: #{$border-color-translucent-dark};
     }
+=======
+    --#{$prefix}code-color: #{$code-color-dark};
+    --#{$prefix}highlight-color: #{$mark-color-dark};
+    --#{$prefix}highlight-bg: #{$mark-bg-dark};
+
+    --#{$prefix}border-color: #{$border-color-dark};
+    --#{$prefix}border-color-translucent: #{$border-color-translucent-dark};
+>>>>>>> b6707fcd3 (feat:  button component implementation (squashed))
 
     --#{$prefix}focus-ring-color: #{$focus-ring-color-dark}; // OUDS mod
 

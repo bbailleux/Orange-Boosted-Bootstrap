@@ -29,7 +29,7 @@
       padding: $ouds-space-fixed-shortest 0 $ouds-space-fixed-shortest $ouds-space-fixed-medium; // OUDS mod
       color: inherit;
       text-decoration: none;
-      border-left: .125rem solid transparent;
+      // OUDS mod: no border-left
 
       &:hover,
       &.active {
