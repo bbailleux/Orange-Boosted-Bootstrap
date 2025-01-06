@@ -228,13 +228,13 @@
     &.btn-strong {
       --#{$prefix}btn-color: var(--#{$prefix}color-content-on-action-loading);
       --#{$prefix}btn-bg: var(--#{$prefix}color-action-loading);
-      --#{$prefix}btn-border-color: var(--#{$prefix}color-opacity-invisible-black);
+      --#{$prefix}btn-border-color: var(--#{$prefix}color-opacity-transparent);
     }
 
     &.btn-negative {
-      --#{$prefix}btn-color: var(--#{$prefix}color-content-on-action-negative);
+      --#{$prefix}btn-color: var(--#{$prefix}color-content-on-status-emphasized-alt);
       --#{$prefix}btn-bg: var(--#{$prefix}color-action-negative-loading);
-      --#{$prefix}btn-border-color: var(--#{$prefix}color-opacity-invisible-black);
+      --#{$prefix}btn-border-color: var(--#{$prefix}color-opacity-transparent);
     }
 
     &.btn-default-on-colored-bg {
@@ -330,21 +330,21 @@
   --#{$prefix}btn-interaction-border-width: #{$ouds-border-width-none};
   @include button-variant(
     var(--#{$prefix}color-action-enabled),
-    var(--#{$prefix}color-opacity-invisible-black),
+    var(--#{$prefix}color-opacity-transparent),
     var(--#{$prefix}color-content-on-action-enabled),
     var(--#{$prefix}color-action-hover),
-    var(--#{$prefix}color-opacity-invisible-black),
+    var(--#{$prefix}color-opacity-transparent),
     var(--#{$prefix}color-content-on-action-hover),
     var(--#{$prefix}color-action-pressed),
-    var(--#{$prefix}color-opacity-invisible-black),
+    var(--#{$prefix}color-opacity-transparent),
     var(--#{$prefix}color-content-on-action-pressed),
     var(--#{$prefix}color-action-disabled),
-    var(--#{$prefix}color-opacity-invisible-black),
+    var(--#{$prefix}color-opacity-transparent),
     var(--#{$prefix}color-content-on-action-disabled)
   );
   @include button-variant-focus(
     var(--#{$prefix}color-action-focus),
-    var(--#{$prefix}color-opacity-invisible-black),
+    var(--#{$prefix}color-opacity-transparent),
     var(--#{$prefix}color-content-on-action-focus)
   );
 }
@@ -354,22 +354,22 @@
   --#{$prefix}btn-interaction-border-width: #{$ouds-border-width-none};
   @include button-variant(
     var(--#{$prefix}color-action-negative-enabled),
-    var(--#{$prefix}color-opacity-invisible-black),
-    var(--#{$prefix}color-content-on-action-negative),
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-status-emphasized-alt),
     var(--#{$prefix}color-action-negative-hover),
-    var(--#{$prefix}color-opacity-invisible-black),
-    var(--#{$prefix}color-content-on-action-negative),
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-status-emphasized-alt),
     var(--#{$prefix}color-action-negative-pressed),
-    var(--#{$prefix}color-opacity-invisible-black),
-    var(--#{$prefix}color-content-on-action-negative),
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-status-emphasized-alt),
     var(--#{$prefix}color-action-disabled),
-    var(--#{$prefix}color-opacity-invisible-black),
+    var(--#{$prefix}color-opacity-transparent),
     var(--#{$prefix}color-content-on-action-disabled)
   );
   @include button-variant-focus(
     var(--#{$prefix}color-action-negative-focus),
-    var(--#{$prefix}color-opacity-invisible-black),
-    var(--#{$prefix}color-content-on-action-negative)
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-status-emphasized-alt)
   );
 }
 
