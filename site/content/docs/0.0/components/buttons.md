@@ -337,79 +337,79 @@ See the buttons un action in our [loading buttons live example]({{< docsref "/ex
   </button>
 </div>
 <div class="p-tall">
-  <button type="button" class="btn btn-default loading-determinate" id="loading-btn-1" disabled>
-    Download file 1
+  <button type="button" class="btn btn-default loading-determinate" id="loading-btn-5" disabled>
+    Download file 5
     <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader">
       <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
     </svg>
-    <span role="status" id="loading-btn-msg-1" class="visually-hidden">Downloading file 1</span>
+    <span role="status" id="loading-btn-msg-5" class="visually-hidden">Downloading file 5</span>
   </button>
-  <button type="button" class="btn btn-strong loading-determinate" id="loading-btn-2" disabled>
-    Download file 2
+  <button type="button" class="btn btn-strong loading-determinate" id="loading-btn-6" disabled>
+    Download file 6
     <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader">
       <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
     </svg>
-    <span role="status" id="loading-btn-msg-2" class="visually-hidden">Downloading file 2</span>
+    <span role="status" id="loading-btn-msg-6" class="visually-hidden">Downloading file 6</span>
   </button>
-  <button type="button" class="btn btn-minimal loading-determinate" id="loading-btn-3" disabled>
-    Download file 3
+  <button type="button" class="btn btn-minimal loading-determinate" id="loading-btn-7" disabled>
+    Download file 7
     <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader">
       <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
     </svg>
-    <span role="status" id="loading-btn-msg-3" class="visually-hidden">Downloading file 3</span>
+    <span role="status" id="loading-btn-msg-7" class="visually-hidden">Downloading file 7</span>
   </button>
-  <button type="button" class="btn btn-negative loading-determinate" id="loading-btn-4" disabled>
-    Download file 4
+  <button type="button" class="btn btn-negative loading-determinate" id="loading-btn-8" disabled>
+    Download file 8
     <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader">
       <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
     </svg>
-    <span role="status" id="loading-btn-msg-4" class="visually-hidden">Downloading file 4</span>
-  </button>
-</div>
-<div class="p-tall colored-bg">
-  <button type="button" class="btn btn-default btn-on-colored-bg loading-indeterminate" id="loading-btn-1" disabled>
-    Download file 1
-    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader">
-      <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
-    </svg>
-    <span role="status" id="loading-btn-msg-1" class="visually-hidden">Downloading file 1</span>
-  </button>
-  <button type="button" class="btn btn-strong btn-on-colored-bg loading-indeterminate" id="loading-btn-2" disabled>
-    Download file 2
-    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader">
-      <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
-    </svg>
-    <span role="status" id="loading-btn-msg-2" class="visually-hidden">Downloading file 2</span>
-  </button>
-  <button type="button" class="btn btn-minimal btn-on-colored-bg loading-indeterminate" id="loading-btn-3" disabled>
-    Download file 3
-    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader">
-      <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
-    </svg>
-    <span role="status" id="loading-btn-msg-3" class="visually-hidden">Downloading file 3</span>
+    <span role="status" id="loading-btn-msg-8" class="visually-hidden">Downloading file 8</span>
   </button>
 </div>
 <div class="p-tall colored-bg">
-  <button type="button" class="btn btn-default btn-on-colored-bg loading-determinate" id="loading-btn-1" disabled>
-    Download file 1
+  <button type="button" class="btn btn-default btn-on-colored-bg loading-indeterminate" id="loading-btn-9" disabled>
+    Download file 9
     <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader">
       <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
     </svg>
-    <span role="status" id="loading-btn-msg-1" class="visually-hidden">Downloading file 1</span>
+    <span role="status" id="loading-btn-msg-9" class="visually-hidden">Downloading file 9</span>
   </button>
-  <button type="button" class="btn btn-strong btn-on-colored-bg loading-determinate" id="loading-btn-2" disabled>
-    Download file 2
+  <button type="button" class="btn btn-strong btn-on-colored-bg loading-indeterminate" id="loading-btn-10" disabled>
+    Download file 10
     <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader">
       <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
     </svg>
-    <span role="status" id="loading-btn-msg-2" class="visually-hidden">Downloading file 2</span>
+    <span role="status" id="loading-btn-msg-10" class="visually-hidden">Downloading file 10</span>
   </button>
-  <button type="button" class="btn btn-minimal btn-on-colored-bg loading-determinate" id="loading-btn-3" disabled>
-    Download file 3
+  <button type="button" class="btn btn-minimal btn-on-colored-bg loading-indeterminate" id="loading-btn-11" disabled>
+    Download file 11
     <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader">
       <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
     </svg>
-    <span role="status" id="loading-btn-msg-3" class="visually-hidden">Downloading file 3</span>
+    <span role="status" id="loading-btn-msg-11" class="visually-hidden">Downloading file 11</span>
+  </button>
+</div>
+<div class="p-tall colored-bg">
+  <button type="button" class="btn btn-default btn-on-colored-bg loading-determinate" id="loading-btn-12" disabled>
+    Download file 12
+    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader">
+      <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
+    </svg>
+    <span role="status" id="loading-btn-msg-12" class="visually-hidden">Downloading file 12</span>
+  </button>
+  <button type="button" class="btn btn-strong btn-on-colored-bg loading-determinate" id="loading-btn-13" disabled>
+    Download file 13
+    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader">
+      <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
+    </svg>
+    <span role="status" id="loading-btn-msg-13" class="visually-hidden">Downloading file 13</span>
+  </button>
+  <button type="button" class="btn btn-minimal btn-on-colored-bg loading-determinate" id="loading-btn-14" disabled>
+    Download file 14
+    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader">
+      <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
+    </svg>
+    <span role="status" id="loading-btn-msg-14" class="visually-hidden">Downloading file 14</span>
   </button>
 </div>
 
