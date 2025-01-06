@@ -49,12 +49,15 @@ OUDS Web includes several button variants, each serving its own semantic purpose
 <!-- OUDS mod: Variants on colored background added -->
 ## Variants on colored background
 
-OUDS Web offers a few variations to use on colored backgrounds (non-primary, secondary, tertiary or emphasized). These buttons will not change regardless of the background color and color mode. Their accessibility (readability) is ensured by suitable semi-opaque backgrounds.
+OUDS Web offers a few variations to use on colored backgrounds (meaning neither primary, nor secondary, nor tertiary, nor emphasized). These buttons will not change regardless of the colored background and color mode. Their accessibility (readability) is ensured by suitable semi-opaque backgrounds.
+
+**Heads up!** Negative buttons should never be used on colored background.
 
 {{< example class="colored-bg">}}
 <button type="button" class="btn btn-default btn-on-colored-bg">Default</button>
 <button type="button" class="btn btn-strong btn-on-colored-bg">Strong</button>
 <button type="button" class="btn btn-minimal btn-on-colored-bg">Minimal</button>
+<!-- BEWARE: `.btn-negative` should never be used on colored backgrounds! -->
 {{< /example >}}
 
 <!-- OUDS mod: With icon added -->
