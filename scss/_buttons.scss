@@ -25,7 +25,7 @@
   --#{$prefix}btn-disabled-opacity: #{$btn-disabled-opacity}; // TODO to check
   --#{$prefix}btn-focus-box-shadow: 0 0 0 #{$btn-focus-width} var(--#{$prefix}btn-focus-shadow-rgb); // OUDS mod
   --#{$prefix}icon-spacing: #{$btn-icon-padding-left}; // OUDS mod TODO to check, maybe $btn-icon-padding-x?
-  --#{$prefix}loading-indeterminate-icon: #{escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path d='M20 10C20 11.9778 19.4135 13.9112 18.3147 15.5557C17.2159 17.2002 15.6541 18.4819 13.8268 19.2388C11.9996 19.9957 9.98891 20.1937 8.0491 19.8079C6.10929 19.422 4.32746 18.4696 2.92893 17.0711C1.53041 15.6725 0.577999 13.8907 0.192147 11.9509C-0.193705 10.0111 0.00432836 8.00043 0.761205 6.17317C1.51808 4.3459 2.79981 2.78412 4.4443 1.6853C6.08879 0.58649 8.02219 -2.35852e-08 10 0V3C8.61553 3 7.26215 3.41054 6.11101 4.17971C4.95986 4.94888 4.06266 6.04213 3.53284 7.32122C3.00303 8.6003 2.86441 10.0078 3.1345 11.3656C3.4046 12.7235 4.07128 13.9708 5.05025 14.9497C6.02922 15.9287 7.2765 16.5954 8.63437 16.8655C9.99224 17.1356 11.3997 16.997 12.6788 16.4672C13.9579 15.9373 15.0511 15.0401 15.8203 13.889C16.5895 12.7378 17 11.3845 17 10H20Z'/></svg>"))}; // OUDS mod
+  --#{$prefix}btn-loading-time: 2s; // OUDS mod
   --#{$prefix}btn-focus-bg: var(--#{$prefix}btn-hover-bg); // OUDS mod
   --#{$prefix}btn-focus-border-color: var(--#{$prefix}btn-hover-border-color); // OUDS mod
   --#{$prefix}btn-focus-color: var(--#{$prefix}btn-hover-color); // OUDs mod
@@ -106,7 +106,7 @@
   // OUDS mod: selectors are slightly different to handle `.btn-check`
   // TODO how to handle to disable links with aria-disabled only
   .btn-check:disabled + &,
-  &:disabled:not(.loading-indeterminate):not(.loading-determinate):not(.skeleton):not(:has(.loader-indeterminate-span)),
+  &:disabled:not(.loading-indeterminate):not(.loading-determinate):not(.skeleton),
   &.disabled,
   fieldset:disabled & {
     color: var(--#{$prefix}btn-disabled-color);
@@ -146,28 +146,22 @@
   // End mod
 
   // OUDS mod: loading buttons
-  &:has(.loader-indeterminate-span) {
-    color: transparent;
+  @keyframes rotate-determinate {
+    0% { stroke-dashoffset: 315 #{"/* rtl:ignore */"}; }
+    100% { stroke-dashoffset: 0 #{"/* rtl:ignore */"}; }
   }
 
-  .loader-indeterminate-span {
-    position: absolute;
-    display: inline-block;
-    width: px-to-rem($ouds-button-size-loader);
-    height: px-to-rem($ouds-button-size-loader);
-    color: var(--#{$prefix}btn-color);
-    vertical-align: middle;
-    background-color: transparent;
-    border: 3px solid currentcolor;
-    border-right-color: transparent;
-    // stylelint-disable-next-line property-disallowed-list
-    border-radius: 50%;
-    animation: .75s linear infinite spinner-border;
+  @keyframes rotate1-indeterminate {
+    0%,
+    100% { stroke-dashoffset: -252 #{"/* rtl:ignore */"}; }
+    50% { stroke-dashoffset: -63 #{"/* rtl:ignore */"}; }
   }
 
-  @keyframes spinner-border {
-    to { transform: rotate(360deg) #{"/* rtl:ignore */"}; }
+  @keyframes rotate2-indeterminate {
+    0% { transform: rotate(0deg) #{"/* rtl:ignore */"}; }
+    100% { transform: rotate(360deg) #{"/* rtl:ignore */"}; }
   }
+
 
   &.loading-indeterminate,
   &.loading-determinate {
@@ -175,44 +169,8 @@
     z-index: 0;
     overflow: hidden;
     color: transparent;
+    border-width: var(--#{$prefix}btn-interaction-border-width);
 
-    &:hover,
-    &:active,
-    &:focus-visible,
-    &:disabled {
-      color: transparent;
-    }
-
-    &::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      width: 100%;
-      height: 100%;
-      color: var(--#{$prefix}btn-color);
-      content: "";
-      background-color: currentcolor;
-      mask-image: var(--#{$prefix}loading-indeterminate-icon);
-      mask-repeat: no-repeat;
-      mask-position: 50% 50%;
-      mask-size: px-to-rem($ouds-button-size-loader);
-      animation: loading-indeterminate-rotate 2s linear infinite;
-    }
-  }
-
-  &.loading-determinate::before {
-    animation: none;
-  }
-
-  @keyframes loading-indeterminate-rotate {
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-  &[class*="loading"],
-  &:has(.loader-indeterminate-span) {
     &.btn-default {
       --#{$prefix}btn-color: #{$ouds-button-color-content-default-loading};
       --#{$prefix}btn-bg: #{$ouds-button-color-bg-default-loading};
@@ -254,6 +212,38 @@
       --#{$prefix}btn-bg: #{$ouds-button-color-bg-minimal-loading-mono};
       --#{$prefix}btn-border-color: #{$ouds-button-color-border-minimal-loading-mono};
     }
+
+    &:hover,
+    &:active,
+    &:focus-visible,
+    &:disabled {
+      color: transparent;
+    }
+
+    .loader {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: 0;
+      transform: translate(-50%, -50%) rotate(-90deg);
+      transform-origin: center;
+    }
+
+    .loader-inner {
+      fill: none;
+      stroke: var(--#{$prefix}btn-color);
+      stroke-dasharray: 315;
+      stroke-width: 20;
+      transform-origin: center;
+    }
+  }
+
+  &.loading-indeterminate .loader-inner {
+    animation: 1.75s infinite linear rotate1-indeterminate, 1s linear infinite rotate2-indeterminate;
+  }
+
+  &.loading-determinate .loader-inner {
+    animation: var(--#{$prefix}btn-loading-time) infinite linear rotate-determinate;
   }
 
   //&.skeleton {
