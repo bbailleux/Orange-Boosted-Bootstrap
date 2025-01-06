@@ -51,7 +51,9 @@ OUDS Web includes several button variants, each serving its own semantic purpose
 
 OUDS Web offers a few variations to use on colored backgrounds (meaning neither primary, nor secondary, nor tertiary, nor emphasized). These buttons will not change regardless of the colored background and color mode. Their accessibility (readability) is ensured by suitable semi-opaque backgrounds.
 
+{{< callout warning >}}
 **Heads up!** Negative buttons should never be used on colored background.
+{{< /callout >}}
 
 {{< example class="colored-bg">}}
 <button type="button" class="btn btn-default btn-on-colored-bg">Default</button>
