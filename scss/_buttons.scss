@@ -582,8 +582,8 @@
 
 // OUDS mod: icon button (icon only, without text)
 .btn-icon {
-  --#{$prefix}btn-padding-start: #{$ouds-button-space-inset-icon-alone};
-  --#{$prefix}btn-padding-end: #{$ouds-button-space-inset-icon-alone};
+  --#{$prefix}btn-padding-start: #{$ouds-button-space-inset-icon-only};
+  --#{$prefix}btn-padding-end: #{$ouds-button-space-inset-icon-only};
 
   > svg,
   > img,
