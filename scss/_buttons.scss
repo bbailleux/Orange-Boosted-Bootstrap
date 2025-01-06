@@ -399,7 +399,7 @@
 
 .btn-strong-on-colored-bg {
   --#{$prefix}btn-border-width: #{$ouds-border-width-none};
-  --#{$prefix}btn-interaction-border-width: #{$ouds-button-border-width-default-interaction-mono};
+  --#{$prefix}btn-interaction-border-width: #{$ouds-border-width-none};
   @include button-variant(
     $ouds-button-color-bg-strong-enabled-mono,
     $ouds-button-color-border-strong-enabled-mono,
@@ -423,7 +423,7 @@
 
 .btn-minimal-on-colored-bg {
   --#{$prefix}btn-border-width: #{$ouds-button-border-width-minimal};
-  --#{$prefix}btn-interaction-border-width: #{$ouds-button-border-width-default-interaction-mono};
+  --#{$prefix}btn-interaction-border-width: #{$ouds-button-border-width-minimal-interaction};
   @include button-variant(
     $ouds-button-color-bg-minimal-enabled-mono,
     $ouds-button-color-border-minimal-enabled-mono,
