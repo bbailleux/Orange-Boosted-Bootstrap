@@ -39,7 +39,6 @@
     - title: Color theme
       draft: true
     - title: Color modes
-      draft: true
     - title: Components
       draft: true
     - title: CSS variables
@@ -193,7 +192,6 @@
   pages:
     - title: API
     - title: Background
-      draft: true
     - title: Borders
     - title: Colors
       draft: true
