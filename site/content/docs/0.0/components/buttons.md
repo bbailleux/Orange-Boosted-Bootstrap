@@ -52,9 +52,9 @@ OUDS Web includes several button variants, each serving its own semantic purpose
 OUDS Web offers a few variations to use on colored backgrounds (non-primary, secondary, tertiary or emphasized). These buttons will not change regardless of the background color and color mode. Their accessibility (readability) is ensured by suitable semi-opaque backgrounds.
 
 {{< example class="colored-bg">}}
-<button type="button" class="btn btn-default-on-colored-bg">Default</button>
-<button type="button" class="btn btn-strong-on-colored-bg">Strong</button>
-<button type="button" class="btn btn-minimal-on-colored-bg">Minimal</button>
+<button type="button" class="btn btn-default btn-on-colored-bg">Default</button>
+<button type="button" class="btn btn-strong btn-on-colored-bg">Strong</button>
+<button type="button" class="btn btn-minimal btn-on-colored-bg">Minimal</button>
 {{< /example >}}
 
 <!-- OUDS mod: With icon added -->
@@ -108,26 +108,26 @@ We strongly advise not using a `<img>`, in particular because the icon will not 
 </div>
 
 <div class="colored-bg p-tall">
-  <button type="button" class="btn btn-default-on-colored-bg">
+  <button type="button" class="btn btn-default btn-on-colored-bg">
     <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
     </svg>
     Default
   </button>
-  <button type="button" class="btn btn-strong-on-colored-bg">
+  <button type="button" class="btn btn-strong btn-on-colored-bg">
     <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
     </svg>
     Strong
   </button>
-  <button type="button" class="btn btn-minimal-on-colored-bg">
+  <button type="button" class="btn btn-minimal btn-on-colored-bg">
     <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
     </svg>
     Minimal
   </button>
 
-  <button type="button" class="btn btn-default-on-colored-bg">
+  <button type="button" class="btn btn-default btn-on-colored-bg">
     <span class="icon si si-settings" aria-hidden="true"></span>
     Default
   </button>
@@ -172,26 +172,26 @@ Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sur
 </div>
 
 <div class="colored-bg p-tall">
-  <button type="button" class="btn btn-icon btn-default-on-colored-bg">
+  <button type="button" class="btn btn-icon btn-default btn-on-colored-bg">
     <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
     </svg>
     <span class="visually-hidden">Default</span>
   </button>
-  <button type="button" class="btn btn-icon btn-strong-on-colored-bg">
+  <button type="button" class="btn btn-icon btn-strong btn-on-colored-bg">
     <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
     </svg>
     <span class="visually-hidden">Strong</span>
   </button>
-  <button type="button" class="btn btn-icon btn-minimal-on-colored-bg">
+  <button type="button" class="btn btn-icon btn-minimal btn-on-colored-bg">
     <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
     </svg>
     <span class="visually-hidden">Minimal</span>
   </button>
 
-  <button type="button" class="btn btn-icon btn-default-on-colored-bg">
+  <button type="button" class="btn btn-icon btn-default btn-on-colored-bg">
     <span class="icon si si-settings" aria-hidden="true"></span>
     <span class="visually-hidden">Default</span>
   </button>
@@ -250,9 +250,9 @@ Make buttons look inactive by adding the `disabled` boolean attribute to any `<b
 </div>
 
 <div class="colored-bg p-tall">
-  <button type="button" class="btn btn-default-on-colored-bg" disabled>Default</button>
-  <button type="button" class="btn btn-strong-on-colored-bg" disabled>Strong</button>
-  <button type="button" class="btn btn-minimal-on-colored-bg" disabled>Minimal</button>
+  <button type="button" class="btn btn-default btn-on-colored-bg" disabled>Default</button>
+  <button type="button" class="btn btn-strong btn-on-colored-bg" disabled>Strong</button>
+  <button type="button" class="btn btn-minimal btn-on-colored-bg" disabled>Minimal</button>
 </div>
 {{< /example >}}
 
@@ -269,8 +269,8 @@ Disabled buttons using the `<a>` element behave a bit different:
   <a class="btn btn-strong disabled" role="button" aria-disabled="true">Strong link</a>
 </div>
 <div class="colored-bg p-tall">
-  <a class="btn btn-default-on-colored-bg disabled" role="button" aria-disabled="true">Default link</a>
-  <a class="btn btn-strong-on-colored-bg disabled" role="button" aria-disabled="true">Strong link</a>
+  <a class="btn btn-default btn-on-colored-bg disabled" role="button" aria-disabled="true">Default link</a>
+  <a class="btn btn-strong btn-on-colored-bg disabled" role="button" aria-disabled="true">Strong link</a>
 </div>
 {{< /example >}}
 
@@ -317,11 +317,11 @@ See the buttons un action in our [loading buttons live example]({{< docsref "/ex
   </button>
 </div>
 <div class="colored-bg p-tall">
-  <button type="button" class="btn btn-default-on-colored-bg loading-indeterminate" id="loading-btn3" disabled>
+  <button type="button" class="btn btn-default btn-on-colored-bg loading-indeterminate" id="loading-btn3" disabled>
     Download file 3
     <span role="status" id="loading-btn-msg3" class="visually-hidden">Downloading file 3</span>
   </button>
-  <button type="button" class="btn btn-default-on-colored-bg loading-determinate" id="loading-btn4" disabled>
+  <button type="button" class="btn btn-default btn-on-colored-bg loading-determinate" id="loading-btn4" disabled>
     Download file 4
     <span role="status" id="loading-btn-msg4" class="visually-hidden">Downloading file 4</span>
   </button>

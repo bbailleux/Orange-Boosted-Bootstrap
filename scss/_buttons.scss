@@ -237,19 +237,19 @@
       --#{$prefix}btn-border-color: var(--#{$prefix}color-opacity-transparent);
     }
 
-    &.btn-default-on-colored-bg {
+    &.btn-default.btn-on-colored-bg {
       --#{$prefix}btn-color: #{$ouds-button-color-content-default-loading-mono};
       --#{$prefix}btn-bg: #{$ouds-button-color-bg-default-loading-mono};
       --#{$prefix}btn-border-color: #{$ouds-button-color-border-default-loading-mono};
     }
 
-    &.btn-strong-on-colored-bg {
+    &.btn-strong.btn-on-colored-bg {
       --#{$prefix}btn-color: #{$ouds-button-color-content-strong-loading-mono};
       --#{$prefix}btn-bg: #{$ouds-button-color-bg-strong-loading-mono};
       --#{$prefix}btn-border-color: #{$ouds-button-color-border-strong-loading-mono};
     }
 
-    &.btn-minimal-on-colored-bg {
+    &.btn-minimal.btn-on-colored-bg {
       --#{$prefix}btn-color: #{$ouds-button-color-content-minimal-loading-mono};
       --#{$prefix}btn-bg: #{$ouds-button-color-bg-minimal-loading-mono};
       --#{$prefix}btn-border-color: #{$ouds-button-color-border-minimal-loading-mono};
@@ -373,7 +373,7 @@
   );
 }
 
-.btn-default-on-colored-bg {
+.btn-default.btn-on-colored-bg {
   --#{$prefix}btn-border-width: #{$ouds-button-border-width-default};
   --#{$prefix}btn-interaction-border-width: #{$ouds-button-border-width-default-interaction-mono};
   @include button-variant(
@@ -397,7 +397,7 @@
   );
 }
 
-.btn-strong-on-colored-bg {
+.btn-strong.btn-on-colored-bg {
   --#{$prefix}btn-border-width: #{$ouds-border-width-none};
   --#{$prefix}btn-interaction-border-width: #{$ouds-border-width-none};
   @include button-variant(
@@ -421,7 +421,7 @@
   );
 }
 
-.btn-minimal-on-colored-bg {
+.btn-minimal.btn-on-colored-bg {
   --#{$prefix}btn-border-width: #{$ouds-button-border-width-minimal};
   --#{$prefix}btn-interaction-border-width: #{$ouds-button-border-width-minimal-interaction};
   @include button-variant(
