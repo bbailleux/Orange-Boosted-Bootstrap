@@ -319,10 +319,6 @@ JavaScript to disable their functionality altogether.
 
 ## Loading state
 
-Use spinners within buttons to indicate an action is currently processing or taking place. You may also swap the text out of the spinner element and utilize button text as needed.
-
-
-
 The loading state of a button indicates that an action is currently processing or taking place. This state provides
 feedback to users, enhancing user experience.
 
@@ -332,16 +328,15 @@ To make an animated loading state button, you will add in your standard button:
   the loading time is defined, you should indicate the progression.
 
 For example, before loading, your button could be like this:
+
 {{< example class="p-none" >}}
-<div class="p-tall">
-  <button type="button" class="btn btn-default" id="loading-btn-0">
-    Download file
-    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader d-none" aria-hidden="true">
-      <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
-    </svg>
-    <span role="status" id="loading-btn-msg-0" class="visually-hidden d-none"></span>
-  </button>
-</div>
+<button type="button" class="btn btn-default" id="loading-btn-0">
+  Download file
+  <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader d-none" aria-hidden="true">
+    <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
+  </svg>
+  <span role="status" id="loading-btn-msg-0" class="visually-hidden d-none"></span>
+</button>
 {{< /example >}}
 
 When the loading starts, you will have to:
