@@ -19,7 +19,7 @@
     }, 1000)
     // stop loading after 10 secondes for this demo
     setTimeout(() => {
-      clearTimeout(updateStatusMessageCall1)
+      clearInterval(updateStatusMessageCall1)
       statusMessage1.innerHTML = 'Downloading file 1 is complete'
       loadingButton1.classList.remove('loading-indeterminate')
       loadingAnimation1.classList.add('d-none')
@@ -50,7 +50,7 @@
     }, interval)
     // stop loading after 10 secondes for this demo
     setTimeout(() => {
-      clearTimeout(updateStatusMessageCall2)
+      clearInterval(updateStatusMessageCall2)
       statusMessage2.innerHTML = 'Downloading file 2 is complete'
       loadingButton2.classList.remove('loading-determinate')
       loadingAnimation2.classList.add('d-none')
