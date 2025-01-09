@@ -216,6 +216,8 @@ toc: true
 
 ### Components
 
+#### Buttons
+
 - <span class="badge text-bg-success">New</span> Button component has been implemented.
 
 ### Examples

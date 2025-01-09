@@ -1,3 +1,4 @@
+// js-docs-start live-loading-buttons
 (() => {
   'use strict'
   // Indeterminate loading time
@@ -10,7 +11,8 @@
     loadingButton1.classList.add('loading-indeterminate')
     loadingAnimation1.classList.remove('d-none')
     loadingButton1.setAttribute('disabled', '')
-    // Update indeterminate loading status every 3 seconds
+    // Update indeterminate loading status every second
+    statusMessage1.classList.remove('d-none')
     statusMessage1.innerHTML = 'Downloading file 1'
     updateStatusMessageCall1 = setInterval(() => {
       statusMessage1.innerHTML = `${statusMessage1.innerHTML}.`
@@ -25,29 +27,6 @@
     }, 5000)
   })
 
-  /* // Bootstrap compatibility for indeterminate loading time
-  const statusMessage3 = document.querySelector('#update3')
-  const loadingButton3 = document.querySelector('#load3')
-  let updateStatusMessageCall3
-  loadingButton3.addEventListener('click', () => {
-    // Change button's look by adding a loading icon and disable it
-    loadingButton3.setAttribute('disabled', '')
-    loadingButton3.innerHTML += '<span class="loader-indeterminate-span" id="loader3" aria-hidden="true"></span>'
-    // Update indeterminate loading status every 3 seconds
-    statusMessage3.innerHTML = 'Downloading file 3'
-    updateStatusMessageCall3 = setInterval(() => {
-      statusMessage3.innerHTML = `${statusMessage3.innerHTML}.`
-    }, 3000)
-    // stop loading after 10 secondes for this demo
-    setTimeout(() => {
-      clearTimeout(updateStatusMessageCall3)
-      statusMessage3.innerHTML = 'End of downloading file 3'
-      const span3 = document.querySelector('#loader3')
-      span3.remove()
-      loadingButton3.removeAttribute('disabled')
-    }, 10000)
-  }) */
-
   // Determinate loading time
   const loadingButton2 = document.querySelector('#loading-btn-2')
   const statusMessage2 = document.querySelector('#loading-btn-msg-2')
@@ -61,7 +40,8 @@
     loadingButton2.classList.add('loading-determinate')
     loadingAnimation2.classList.remove('d-none')
     loadingButton2.setAttribute('disabled', '')
-    // Update indeterminate loading status every 3 seconds
+    // Update indeterminate loading status every 'interval' seconds
+    statusMessage2.classList.remove('d-none')
     statusMessage2.innerHTML = 'Downloading file 2: 0%'
     updateStatusMessageCall2 = setInterval(() => {
       counter++
@@ -78,3 +58,4 @@
     }, (loadingTime.slice(0, -1) * 1000))
   })
 })()
+// js-docs-end live-loading-buttons

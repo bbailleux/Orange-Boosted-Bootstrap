@@ -10,19 +10,22 @@ toc: true
 
 ## Base class
 
-OUDS Web has a base `.btn` class that sets up basic styles such as padding and content alignment. By default, `.btn` controls have a transparent border and background color, but still defines basic focus and hover styles.
+OUDS Web has a base `.btn` class that sets up basic styles such as padding and content alignment. By default, `.btn`
+controls have a transparent border and background color, but still defines basic focus and hover styles.
 
 {{< example >}}
 <button type="button" class="btn">Base class</button>
 {{< /example >}}
 
-The `.btn` class is intended to be used in conjunction with our button variants, or to serve as a basis for your own custom styles.
+The `.btn` class is intended to be used in conjunction with our button variants, or to serve as a basis for your own
+custom styles.
 
 <!-- OUDS mod: no warning callout about `:focus`/`:focus-visible` since OUDS Web provides a default visible focus for each focusable element -->
 
 ## Standard variants
 
-OUDS Web includes several button variants, each serving its own semantic purpose, with a few extras thrown in for more control.
+OUDS Web includes several button variants, each serving its own semantic purpose, with a few extras thrown in for more
+control.
 
 {{< example >}}
 <button type="button" class="btn btn-default">Default</button>
@@ -47,9 +50,12 @@ OUDS Web includes several button variants, each serving its own semantic purpose
 <!-- OUDS mod: no accessibility tip callout about colored buttons since OUDS Web does not provide such buttons -->
 
 <!-- OUDS mod: Variants on colored background added -->
+
 ## Variants on colored background
 
-OUDS Web offers a few variations to use on colored backgrounds (meaning neither primary, nor secondary, nor tertiary, nor emphasized). These buttons will not change regardless of the colored background and color mode. Their accessibility (readability) is ensured by suitable semi-opaque backgrounds.
+OUDS Web offers a few variations to use on colored backgrounds (meaning neither primary, nor secondary, nor tertiary,
+nor emphasized backgrounds). These buttons will not change regardless of the colored background and color mode. Their
+accessibility (readability) is ensured by suitable semi-opaque backgrounds.
 
 {{< callout warning >}}
 **Heads up!** Negative buttons should never be used on colored background.
@@ -63,22 +69,28 @@ OUDS Web offers a few variations to use on colored backgrounds (meaning neither 
 {{< /example >}}
 
 <!-- OUDS mod: With icon added -->
+
 ## With icon
 
 ### Text and icon
 
-The recommended way of using an icon in a button is an embedded SVG<!-- ({{< docsref "/extend/icons" >}}) -->. You need to:
+The recommended way of using an icon in a button is an embedded SVG<!-- ({{< docsref "/extend/icons" >}}) -->. You need
+to:
 
 - set its dimensions to default `1rem` size, the icon will adapt automatically,
 - fill it using `currentColor` to respect button color scheme.
 
-You don't need to apply `.me-shorter` class on the icon to get consistent spacing, as the margin is already handled by OUDS Web.
+You don't need to apply `.me-shorter` class on the icon to get consistent spacing, as the margin is already handled by
+OUDS Web.
 
-Please note that if you experience a problem with a cropped SVG, we recommend using the `.overflow-visible` utility on the SVG to fix its rendering.
+Please note that if you experience a problem with a cropped SVG, we recommend using the `.overflow-visible` utility on
+the SVG to fix its rendering.
 
-If really needed, you can use a font icon associated the `.icon` class to set correct parameters for the `font-size` and `line-height`.
+If really needed, you can use a font icon associated the `.icon` class to set correct parameters for the `font-size` and
+`line-height`.
 
-We strongly advise not using a `<img>`, in particular because the icon will not benefit from dynamic color changes on states (hover, focus, active) and the color mode system won't work.
+We strongly advise not using a `<img>`, in particular because the icon will not benefit from dynamic color changes on
+states (hover, focus, active) and the color mode system won't work.
 
 {{< example class="p-none">}}
 <div class="p-tall">
@@ -141,7 +153,8 @@ We strongly advise not using a `<img>`, in particular because the icon will not 
 
 ### Icon only
 
-Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sure to provide an accessible name to your button, either using a `.visually-hidden` content or a `aria-label` attribute.
+Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sure to provide an accessible name to your
+button, either using a `.visually-hidden` content or a `aria-label` attribute.
 
 {{< example class="p-none">}}
 <div class="p-tall">
@@ -207,13 +220,17 @@ Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sur
 
 ## Disable text wrapping
 
-If you don't want the button text to wrap, you can add the `.text-nowrap` class to the button. In Sass, you can set `$btn-white-space: nowrap` to disable text wrapping for each button.
+If you don't want the button text to wrap, you can add the `.text-nowrap` class to the button. In Sass, you can set
+`$btn-white-space: nowrap` to disable text wrapping for each button.
 
 ## HTML button tags
 
-The `.btn` classes are designed to be used with the `<button>` element. However, you can also use these classes on `<a>` or `<input>` elements (though some browsers may apply a slightly different rendering).
+The `.btn` classes are designed to be used with the `<button>` element. However, you can also use these classes on `<a>`
+or `<input>` elements (though some browsers may apply a slightly different rendering).
 
-When using button classes on `<a>` elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a `role="button"` to appropriately convey their purpose to assistive technologies such as screen readers.
+When using button classes on `<a>` elements that are used to trigger in-page functionality (like collapsing content),
+rather than linking to new pages or sections within the current page, these links should be given a `role="button"` to
+appropriately convey their purpose to assistive technologies such as screen readers.
 
 {{< example >}}
 <a class="btn btn-default" href="#" role="button">Link</a>
@@ -227,7 +244,8 @@ When using button classes on `<a>` elements that are used to trigger in-page fun
 
 {{< bootstrap-compatibility >}}
 
-In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the `.btn-outline-*` ones to remove all background images and colors on any button.
+In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the
+`.btn-outline-*` ones to remove all background images and colors on any button.
 
 {{< example >}}
 {{< buttons.inline >}}
@@ -243,7 +261,8 @@ In need of a button, but not the hefty background colors they bring? Replace the
 
 ## Disabled state
 
-Make buttons look inactive by adding the `disabled` boolean attribute to any `<button>` element. Disabled buttons have `pointer-events: none` applied to, preventing hover and active states from triggering.
+Make buttons look inactive by adding the `disabled` boolean attribute to any `<button>` element. Disabled buttons have
+`pointer-events: none` applied to, preventing hover and active states from triggering.
 
 <!--Boosted mod: no outline buttons-->
 {{< example class="p-none" >}}
@@ -263,9 +282,11 @@ Make buttons look inactive by adding the `disabled` boolean attribute to any `<b
 
 Disabled buttons using the `<a>` element behave a bit different:
 
-- `<a>`s don't support the `disabled` attribute, so you must add the `.disabled` class to make it visually appear disabled.
+- `<a>`s don't support the `disabled` attribute, so you must add the `.disabled` class to make it visually appear
+  disabled.
 - Some future-friendly styles are included to disable all `pointer-events` on anchor buttons.
-- Disabled buttons using `<a>` should include the `aria-disabled="true"` attribute to indicate the state of the element to assistive technologies.
+- Disabled buttons using `<a>` should include the `aria-disabled="true"` attribute to indicate the state of the element
+  to assistive technologies.
 - Disabled buttons using `<a>` *should not* include the `href` attribute.
 
 {{< example class="p-none" >}}
@@ -281,7 +302,13 @@ Disabled buttons using the `<a>` element behave a bit different:
 
 ### Link functionality caveat
 
-To cover cases where you have to keep the `href` attribute on a disabled link, the `.disabled` class uses `pointer-events: none` to try to disable the link functionality of `<a>`s. Note that this CSS property is not yet standardized for HTML, but all modern browsers support it. In addition, even in browsers that do support `pointer-events: none`, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, in addition to `aria-disabled="true"`, also include a `tabindex="-1"` attribute on these links to prevent them from receiving keyboard focus, and use custom JavaScript to disable their functionality altogether.
+To cover cases where you have to keep the `href` attribute on a disabled link, the `.disabled` class uses
+`pointer-events: none` to try to disable the link functionality of `<a>`s. Note that this CSS property is not yet
+standardized for HTML, but all modern browsers support it. In addition, even in browsers that do support
+`pointer-events: none`, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of
+assistive technologies will still be able to activate these links. So to be safe, in addition to `aria-disabled="true"`,
+also include a `tabindex="-1"` attribute on these links to prevent them from receiving keyboard focus, and use custom
+JavaScript to disable their functionality altogether.
 
 {{< example >}}
 <a href="#" class="btn btn-default disabled" tabindex="-1" role="button" aria-disabled="true">Default link</a>
@@ -289,135 +316,166 @@ To cover cases where you have to keep the `href` attribute on a disabled link, t
 {{< /example >}}
 
 <!-- OUDS mod: Loading state added -->
+
 ## Loading state
 
-The loading state of a button indicates that an action is currently processing or taking place. This state provides feedback to users, enhancing user experience.
-<!-- TODO to finalize depending on the chosen implementation -->
+Use spinners within buttons to indicate an action is currently processing or taking place. You may also swap the text out of the spinner element and utilize button text as needed.
+
+
+
+The loading state of a button indicates that an action is currently processing or taking place. This state provides
+feedback to users, enhancing user experience.
+
+To make an animated loading state button, you will add in your standard button:
+- An animated `<svg>`: the animation will differ whether the loading time is known or not.
+- A status message `<span>`: the message must be updated regularly in order to be vocalized by screen readers; if
+  the loading time is defined, you should indicate the progression.
+
+For example, before loading, your button could be like this:
+{{< example class="p-none" >}}
+<div class="p-tall">
+  <button type="button" class="btn btn-default" id="loading-btn-0">
+    Download file
+    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader d-none" aria-hidden="true">
+      <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
+    </svg>
+    <span role="status" id="loading-btn-msg-0" class="visually-hidden d-none"></span>
+  </button>
+</div>
+{{< /example >}}
+
 When the loading starts, you will have to:
+- Add the class `.loading-indeterminate` (for an unknown loading time) or `.loading-determinate` (for a known
+  loading time) to the button to provide the appropriate styles and animation.
 - Add the `disabled` attribute to the button to avoid any unwanted interactions.
-- Add the class `.loading-indeterminate` (for an indeterminate loading time) or `.loading-determinate` (for a defined loading time); this will provide an animation corresponding to the current state.
-- Update regularly the `<span>` containing the loading message in order to be vocalized by screen readers; if the loading time is defined, you should indicate the progression.
+- Remove the `.d-none` from the animated `<svg>` and the status message `<span>`.
+- Update regularly the status message `<span>` containing the loading message.
 
 At the end of the loading, you should:
-- Remove the `disabled` attribute to the button to restore its interactivity.
-- Remove the class `.loading-indeterminate` or `.loading-determinate` to restore its look.
-- Set a final status message, indicating the loading has ended.
 
-See the buttons un action in our [loading buttons live example]({{< docsref "/examples/loading-buttons" >}}).
+- Remove the `disabled` attribute to the button to restore its interactivity.
+- Remove the class `.loading-indeterminate` or `.loading-determinate` to restore the button's look.
+- Set a final status message in `<span>`, indicating the loading has ended.
+- Add the `.d-none` class on the animated `<svg>` (we don't add again `.d-none` on the status message `<span>` to let the users know the download has already be done).
+
+See the buttons in action in our [loading buttons live example]({{< docsref "/examples/loading-buttons" >}}).
 
 {{< example class="p-none" >}}
 <div class="p-tall">
   <button type="button" class="btn btn-default loading-indeterminate" id="loading-btn-1" disabled>
     Download file 1
-    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader">
+    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
     </svg>
     <span role="status" id="loading-btn-msg-1" class="visually-hidden">Downloading file 1</span>
   </button>
   <button type="button" class="btn btn-strong loading-indeterminate" id="loading-btn-2" disabled>
     Download file 2
-    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader">
+    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
     </svg>
     <span role="status" id="loading-btn-msg-2" class="visually-hidden">Downloading file 2</span>
   </button>
   <button type="button" class="btn btn-minimal loading-indeterminate" id="loading-btn-3" disabled>
     Download file 3
-    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader">
+    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
     </svg>
     <span role="status" id="loading-btn-msg-3" class="visually-hidden">Downloading file 3</span>
   </button>
   <button type="button" class="btn btn-negative loading-indeterminate" id="loading-btn-4" disabled>
     Download file 4
-    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader">
+    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
     </svg>
     <span role="status" id="loading-btn-msg-4" class="visually-hidden">Downloading file 4</span>
   </button>
 </div>
+
 <div class="p-tall">
   <button type="button" class="btn btn-default loading-determinate" id="loading-btn-5" disabled>
     Download file 5
-    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader">
+    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
     </svg>
-    <span role="status" id="loading-btn-msg-5" class="visually-hidden">Downloading file 5</span>
+    <span role="status" id="loading-btn-msg-5" class="visually-hidden">Downloading file 5: xx%</span>
   </button>
   <button type="button" class="btn btn-strong loading-determinate" id="loading-btn-6" disabled>
     Download file 6
-    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader">
+    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
     </svg>
-    <span role="status" id="loading-btn-msg-6" class="visually-hidden">Downloading file 6</span>
+    <span role="status" id="loading-btn-msg-6" class="visually-hidden">Downloading file 6: xx%</span>
   </button>
   <button type="button" class="btn btn-minimal loading-determinate" id="loading-btn-7" disabled>
     Download file 7
-    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader">
+    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
     </svg>
-    <span role="status" id="loading-btn-msg-7" class="visually-hidden">Downloading file 7</span>
+    <span role="status" id="loading-btn-msg-7" class="visually-hidden">Downloading file 7: xx%</span>
   </button>
   <button type="button" class="btn btn-negative loading-determinate" id="loading-btn-8" disabled>
     Download file 8
-    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader">
+    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
     </svg>
-    <span role="status" id="loading-btn-msg-8" class="visually-hidden">Downloading file 8</span>
+    <span role="status" id="loading-btn-msg-8" class="visually-hidden">Downloading file 8: xx%</span>
   </button>
 </div>
+
 <div class="p-tall colored-bg">
   <button type="button" class="btn btn-default btn-on-colored-bg loading-indeterminate" id="loading-btn-9" disabled>
     Download file 9
-    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader">
+    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
     </svg>
     <span role="status" id="loading-btn-msg-9" class="visually-hidden">Downloading file 9</span>
   </button>
   <button type="button" class="btn btn-strong btn-on-colored-bg loading-indeterminate" id="loading-btn-10" disabled>
     Download file 10
-    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader">
+    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
     </svg>
     <span role="status" id="loading-btn-msg-10" class="visually-hidden">Downloading file 10</span>
   </button>
   <button type="button" class="btn btn-minimal btn-on-colored-bg loading-indeterminate" id="loading-btn-11" disabled>
     Download file 11
-    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader">
+    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
     </svg>
     <span role="status" id="loading-btn-msg-11" class="visually-hidden">Downloading file 11</span>
   </button>
 </div>
+
 <div class="p-tall colored-bg">
   <button type="button" class="btn btn-default btn-on-colored-bg loading-determinate" id="loading-btn-12" disabled>
     Download file 12
-    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader">
+    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
     </svg>
-    <span role="status" id="loading-btn-msg-12" class="visually-hidden">Downloading file 12</span>
+    <span role="status" id="loading-btn-msg-12" class="visually-hidden">Downloading file 12: xx%</span>
   </button>
   <button type="button" class="btn btn-strong btn-on-colored-bg loading-determinate" id="loading-btn-13" disabled>
     Download file 13
-    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader">
+    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
     </svg>
-    <span role="status" id="loading-btn-msg-13" class="visually-hidden">Downloading file 13</span>
+    <span role="status" id="loading-btn-msg-13" class="visually-hidden">Downloading file 13: xx%</span>
   </button>
   <button type="button" class="btn btn-minimal btn-on-colored-bg loading-determinate" id="loading-btn-14" disabled>
     Download file 14
-    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader">
+    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
     </svg>
-    <span role="status" id="loading-btn-msg-14" class="visually-hidden">Downloading file 14</span>
+    <span role="status" id="loading-btn-msg-14" class="visually-hidden">Downloading file 14: xx%</span>
   </button>
 </div>
-
 {{< /example >}}
 
 ## Block buttons
 
-Create responsive stacks of full-width, "block buttons" with a mix of our display and gap utilities. By using utilities instead of button-specific classes, we have much greater control over spacing, alignment, and responsive behaviors.
+Create responsive stacks of full-width, "block buttons" with a mix of our display and gap utilities. By using utilities
+instead of button-specific classes, we have much greater control over spacing, alignment, and responsive behaviors.
 
 Please note that these **full-width** buttons should not be used on desktop screens. <!-- OUDS mod -->
 
@@ -428,7 +486,9 @@ Please note that these **full-width** buttons should not be used on desktop scre
 </div>
 {{< /example >}}
 
-Here we create a responsive variation, starting with vertically stacked buttons until the `md` breakpoint, where `.d-md-block` replaces the `.d-grid` class, thus nullifying the `gap-short` utility. Resize your browser to see them change.
+Here we create a responsive variation, starting with vertically stacked buttons until the `md` breakpoint, where
+`.d-md-block` replaces the `.d-grid` class, thus nullifying the `gap-short` utility. Resize your browser to see them
+change.
 
 {{< example >}}
 <div class="d-grid gap-short d-md-block">
@@ -437,7 +497,8 @@ Here we create a responsive variation, starting with vertically stacked buttons 
 </div>
 {{< /example >}}
 
-You can adjust the width of your block buttons with grid column width classes. For example, for a half-width "block button", use `.col-6`. Center it horizontally with `.mx-auto`, too.
+You can adjust the width of your block buttons with grid column width classes. For example, for a half-width "block
+button", use `.col-6`. Center it horizontally with `.mx-auto`, too.
 
 {{< example >}}
 <div class="d-grid gap-short col-6 mx-auto">
@@ -446,7 +507,9 @@ You can adjust the width of your block buttons with grid column width classes. F
 </div>
 {{< /example >}}
 
-Additional utilities can be used to adjust the alignment of buttons when horizontal. Here we've taken our previous responsive example and added some flex utilities and a margin utility on the button to right-align the buttons when they're no longer stacked.
+Additional utilities can be used to adjust the alignment of buttons when horizontal. Here we've taken our previous
+responsive example and added some flex utilities and a margin utility on the button to right-align the buttons when
+they're no longer stacked.
 
 {{< example >}}
 <div class="d-grid gap-short d-md-flex justify-content-md-end">
@@ -461,12 +524,14 @@ Additional utilities can be used to adjust the alignment of buttons when horizon
 
 ### Variables
 
-As part of OUDS Web's evolving CSS variables approach, buttons now use local CSS variables on `.btn` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part of OUDS Web's evolving CSS variables approach, buttons now use local CSS variables on `.btn` for enhanced
+real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="btn-css-vars" file="scss/_buttons.scss" >}}
 
 <!--Boosted mod: no outline variant-->
-Each `.btn-*` modifier class updates the appropriate CSS variables to minimize additional CSS rules with our `button-variant()` and `button-size()` mixins.
+Each `.btn-*` modifier class updates the appropriate CSS variables to minimize additional CSS rules with our
+`button-variant()` and `button-size()` mixins.
 
 <!-- OUDS mod: no custom `.btn-*` modifier class-->
 
@@ -490,7 +555,8 @@ There are four mixins for buttons: button and button outline variant mixins (bot
 
 ### Sass loops
 
-Button variants (for regular and outline buttons) use their respective mixins with our `$theme-colors` map to generate the modifier classes in `scss/_buttons.scss`.
+Button variants (for regular and outline buttons) use their respective mixins with our `$theme-colors` map to generate
+the modifier classes in `scss/_buttons.scss`.
 
 {{< scss-docs name="btn-variant-loops" file="scss/_buttons.scss" >}}
 
