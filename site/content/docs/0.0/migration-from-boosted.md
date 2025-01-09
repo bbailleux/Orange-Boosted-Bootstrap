@@ -94,6 +94,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 <div class="ps-taller">
 
 For example, if you used to write:
+
 ```html
 <button class="btn btn-secondary" type="button" disabled>
   <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
@@ -101,6 +102,7 @@ For example, if you used to write:
 </button>
 ```
 Now you should write:
+
 ```html
 <button type="button" class="btn btn-default loading-indeterminate" id="loading-btn-1" disabled>
   Download file 1
@@ -110,11 +112,12 @@ Now you should write:
   <span role="status" id="loading-btn-msg-1" class="visually-hidden">Downloading file 1</span>
 </button>
 ```
+
 You will have to make some extra Javascript to change the styles and update the status message like explained in the documentation. You can find a complete example in our [loading buttons live example]({{< docsref "/examples/loading-buttons" >}}).
 
 </div>
 
-- <span class="badge text-bg-danger">Breaking</span> Button plugin (button with a toggle behaviour) has been removed.
+- <span class="badge text-bg-danger">Breaking</span> Button plugin (button with a toggle behavior) has been removed.
 
 ## Forms
 
