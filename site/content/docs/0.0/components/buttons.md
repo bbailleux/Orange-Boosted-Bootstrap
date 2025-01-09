@@ -329,7 +329,7 @@ To make an animated loading state button, you will add in your standard button:
 
 For example, before loading, your button could be like this:
 
-{{< example class="p-none" >}}
+{{< example >}}
 <button type="button" class="btn btn-default" id="loading-btn-0">
   Download file
   <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader d-none" aria-hidden="true">
