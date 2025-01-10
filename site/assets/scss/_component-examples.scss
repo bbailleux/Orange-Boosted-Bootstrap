@@ -40,12 +40,6 @@
     margin-top: 2rem;
   }
 
-  &.colored-bg,
-  .colored-bg {
-    //background: repeating-linear-gradient(-45deg, var(--bs-color-surface-brand-primary), var(--bs-color-surface-brand-primary) 40px, var(--bs-color-surface-status-warning-emphasized) 40px, var(--bs-color-surface-status-warning-emphasized) 80px, var(--bs-color-surface-status-negative-emphasized) 80px, var(--bs-color-surface-status-negative-emphasized) 120px, var(--bs-color-surface-status-positive-emphasized) 120px, var(--bs-color-surface-status-positive-emphasized) 160px, var(--bs-color-surface-status-info-emphasized) 160px, var(--bs-color-surface-status-info-emphasized) 200px);
-    background-color: $ouds-color-surface-brand-primary-light;
-  }
-
   > .form-control {
     + .form-control {
       margin-top: .5rem;
