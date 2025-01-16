@@ -11,7 +11,7 @@
     const tac = document.getElementById('tarteaucitron')
 
     tac.querySelectorAll('.tarteaucitronAllow').forEach(button => {
-      button.classList.add('btn', 'btn-default')
+      button.classList.add('btn', 'btn-strong')
       button.innerHTML = tarteaucitron.lang.allowAll
     })
 
@@ -33,7 +33,7 @@
     alert.setAttribute('data-bs-theme', 'dark')
 
     document.getElementById('tarteaucitronCloseAlert').classList.add('btn', 'btn-default', 'ms-lg-2')
-    alert.querySelector('.tarteaucitronAllow').classList.add('btn', 'btn-default', 'mx-sm-2', 'ms-lg-auto', 'my-2', 'my-lg-0')
+    alert.querySelector('.tarteaucitronAllow').classList.add('btn', 'btn-strong', 'mx-sm-2', 'ms-lg-auto', 'my-2', 'my-lg-0')
     alert.querySelector('.tarteaucitronAllow').innerHTML = tarteaucitron.lang.acceptAll
     alert.querySelector('.tarteaucitronDeny').classList.add('btn', 'btn-negative', 'mx-sm-2', 'my-2', 'my-lg-0')
     alert.querySelector('.tarteaucitronDeny').innerHTML = tarteaucitron.lang.denyAll
@@ -50,6 +50,10 @@
       const denyConsentButton = document.querySelector('#tarteaucitronAllDenied')
       const checkboxes = document.querySelectorAll('.form-check-input')
 
+      allowConsentButton.innerHTML = '<svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">\n' +
+        '<use xlink:href="/docs/0.0/assets/img/ouds-web-sprite.svg#tick"/>\n' +
+        `</svg>${allowConsentButton.innerHTML}`
+
       allowConsentButton.addEventListener('click', () => {
         for (let i = 0; i < checkboxes.length; i++) {
           if (!checkboxes.checked) {
@@ -57,6 +61,11 @@
           }
         }
       })
+
+      denyConsentButton.innerHTML = '<svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">\n' +
+        '<use xlink:href="/docs/0.0/assets/img/ouds-web-sprite.svg#delete"/>\n' +
+        `</svg>${denyConsentButton.innerHTML}`
+
       denyConsentButton.addEventListener('click', () => {
         for (let i = 0; i < checkboxes.length; i++) {
           if (checkboxes.checked !== true) {
