@@ -24,6 +24,7 @@
       loadingButton1.classList.remove('loading-indeterminate')
       loadingAnimation1.classList.add('d-none')
       loadingButton1.removeAttribute('disabled')
+      loadingButton1.focus()
     }, 5000)
   })
 
@@ -55,6 +56,7 @@
       loadingButton2.classList.remove('loading-determinate')
       loadingAnimation2.classList.add('d-none')
       loadingButton2.removeAttribute('disabled')
+      loadingButton2.focus()
     }, (loadingTime.slice(0, -1) * 1000))
   })
 })()

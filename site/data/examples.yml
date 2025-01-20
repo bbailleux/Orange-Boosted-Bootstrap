@@ -37,17 +37,6 @@
       url: /examples/tree/main/webpack
       indexPath: src/index.html
 
-
-- category: Framework
-  description: "Examples that focus on implementing uses of built-in components provided by OUDS Web."
-  examples:
-    - name: Font
-      description: "Multiple examples of fonts to see them in action."
-    - name: Grid
-      description: "Multiple examples of grid layouts with all four tiers, nesting, and more."
-    - name: Grid system
-      description: "OUDS Web default grid system illustration."
-
 - category: Framework
   description: "Examples that focus on implementing uses of built-in components provided by OUDS Web."
   examples:

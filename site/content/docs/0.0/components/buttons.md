@@ -373,6 +373,7 @@ At the end of the loading, you should:
 - Remove the class `.loading-indeterminate` or `.loading-determinate` to restore the button's look.
 - Set a final status message in `<span>`, indicating the loading has ended.
 - Add the `.d-none` class on the animated `<svg>` (we don't add again `.d-none` on the status message `<span>` to let the users know the download has already be done).
+- Put the focus back on the button to ensure similar behavior across browsers and not lose the user after changes.
 
 See the buttons in action in our [loading buttons live example]({{< docsref "/examples/loading-buttons" >}}).
 
