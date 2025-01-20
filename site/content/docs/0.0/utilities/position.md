@@ -101,7 +101,7 @@ Here are some real life examples of these classes:
 </div>
 
 <button type="button" class="btn btn-strong position-relative">
-  Alerts <span class="position-absolute top-0 start-100 translate-middle badge border rounded-circle text-bg-warning p-short"><span class="visually-hidden">unread messages</span></span>
+  Alerts <span class="position-absolute top-0 start-100 translate-middle badge border rounded-circle text-bg-status-warning-emphasized p-short"><span class="visually-hidden">unread messages</span></span>
 </button>
 {{< /example >}}
 

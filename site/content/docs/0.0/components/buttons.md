@@ -8,6 +8,10 @@ aliases:
 toc: true
 ---
 
+{{< callout info >}}
+You can find here the [OUDS Button guidelines](https://unified-design-system.orange.com/472794e18/p/48a788-button).
+{{< /callout >}}
+
 ## Base class
 
 OUDS Web has a base `.btn` class that sets up basic styles such as padding and content alignment. By default, `.btn`
