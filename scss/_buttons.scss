@@ -153,8 +153,10 @@
 
   @keyframes rotate1-indeterminate {
     0%,
-    100% { stroke-dashoffset: -252 #{"/* rtl:ignore */"}; }
-    50% { stroke-dashoffset: -63 #{"/* rtl:ignore */"}; }
+    10% { stroke-dashoffset: 560 #{"/* rtl:ignore */"}; }
+    50%,
+    60% { stroke-dashoffset: 280 #{"/* rtl:ignore */"}; }
+    100% { stroke-dashoffset: 0 #{"/* rtl:ignore */"}; }
   }
 
   @keyframes rotate2-indeterminate {
@@ -232,14 +234,14 @@
     .loader-inner {
       fill: none;
       stroke: var(--#{$prefix}btn-color);
-      stroke-dasharray: 315;
+      stroke-dasharray: 280;
       stroke-width: 20;
       transform-origin: center;
     }
   }
 
   &.loading-indeterminate .loader-inner {
-    animation: 1.75s infinite linear rotate1-indeterminate, 1s linear infinite rotate2-indeterminate;
+    animation: 2.1875s infinite linear rotate1-indeterminate, 1.25s linear infinite rotate2-indeterminate;
   }
 
   &.loading-determinate .loader-inner {
