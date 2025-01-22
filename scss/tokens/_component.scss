@@ -276,15 +276,15 @@ $ouds-navigation-link-color-arrow-focus: var(--#{$prefix}color-content-brand-pri
 $ouds-navigation-link-color-arrow-hover: var(--#{$prefix}color-content-brand-primary) !default;
 $ouds-navigation-link-color-arrow-pressed: var(--#{$prefix}color-content-brand-primary) !default;
 $ouds-navigation-link-color-content-enabled: var(--#{$prefix}color-action-enabled) !default;
-// $ouds-navigation-link-color-content-focus: var(--#{$prefix}color-action-focus) !default;
+$ouds-navigation-link-color-content-focus: var(--#{$prefix}color-action-focus) !default;
 $ouds-navigation-link-color-content-hover: var(--#{$prefix}color-action-hover) !default;
 $ouds-navigation-link-color-content-pressed: var(--#{$prefix}color-action-pressed) !default;
 $ouds-navigation-link-size-icon-medium: $ouds-size-icon-with-label-large-size-xs !default;
 $ouds-navigation-link-size-icon-small: $ouds-size-icon-with-label-medium-size-sm !default;
 $ouds-navigation-link-space-column-gap-arrow-medium: $ouds-space-column-gap-shorter !default;
 $ouds-navigation-link-space-column-gap-arrow-small: $ouds-space-column-gap-shortest !default;
-// $ouds-navigation-link-space-column-gap-icon-medium: $ouds-space-column-gap-short !default;
-// $ouds-navigation-link-space-column-gap-icon-small: $ouds-space-column-gap-shorter !default;
+$ouds-navigation-link-space-column-gap-icon-medium: $ouds-space-column-gap-short !default;
+$ouds-navigation-link-space-column-gap-icon-small: $ouds-space-column-gap-shorter !default;
 $ouds-navigation-link-space-padding-block: $ouds-space-padding-block-medium !default;
 $ouds-navigation-link-space-padding-inline: $ouds-space-padding-inline-none !default;
 // scss-docs-end ouds-component-navigation

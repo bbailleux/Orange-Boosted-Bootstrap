@@ -176,8 +176,6 @@
     - title: Focus ring
       draft: true
     - title: Icon
-    - title: Icon link
-      draft: true
     - title: Position
     - title: Ratio
     - title: Stacks
@@ -200,8 +198,6 @@
     - title: Flex
     - title: Float
     - title: Interactions
-    - title: Link
-      draft: true
     - title: Object fit
     - title: Opacity
     - title: Overflow

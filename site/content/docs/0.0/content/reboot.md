@@ -128,10 +128,12 @@ Links have a disabled style when using an `aria-disabled="true"` attribute.
 <a href="#" aria-disabled="true">This is an example of a disabled link</a>
 {{< /example >}}
 
-The `:visited` status can be styled with the additional `.visited` utility class.
+Visited links don't have a specific style by default. The `:visited` status can be styled with the additional `.visited-links` utility class that can be applied to a parent element to style all the child links.
 
 {{< example >}}
-<a href="#" class="visited">This is an example of a visited link</a>
+<div class="visited-links">
+  <a href="#" >This is an example of a visited link</a>
+</div>
 {{< /example >}}
 
 ## Horizontal rules
