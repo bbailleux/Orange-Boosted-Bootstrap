@@ -3,22 +3,24 @@
 //
 
 %chevron-properties {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   width: $ouds-navigation-link-size-icon-medium;
   height: $ouds-navigation-link-size-icon-medium;
-  vertical-align: middle;
   content: "";
   background-color: $ouds-navigation-link-color-arrow-enabled;
   mask: var(--#{$prefix}chevron-icon) no-repeat;
 }
 
-.link {
+.link,
+.link-chevron,
+.icon-link {
   // scss-docs-start link-css-vars
   --#{$prefix}link-color-rgb: #{$ouds-navigation-link-color-content-enabled};
   // scss-docs-end link-css-vars
 
   @include get-font-size("label-large");
-  display: block;
+  display: inline-flex;
   min-width: $ouds-navigation-link-size-min-width-medium;
   min-height: $ouds-navigation-link-size-min-height-medium;
   padding: $ouds-navigation-link-space-padding-block $ouds-navigation-link-space-padding-inline;
@@ -26,10 +28,15 @@
   color: var(--#{$prefix}link-color-rgb);
   text-decoration: $link-decoration;// OUDS mod
 
-  &:hover,
+  &:hover {
+    --#{$prefix}link-color-rgb: #{$ouds-navigation-link-color-content-hover};
+
+    text-decoration: $link-hover-decoration;
+  }
+
   &:focus-visible,
   &:focus[data-focus-visible-added] {
-    --#{$prefix}link-color-rgb: #{$ouds-navigation-link-color-content-hover};
+    --#{$prefix}link-color-rgb: #{$ouds-navigation-link-color-content-focus};
 
     text-decoration: $link-hover-decoration;
   }
@@ -53,7 +60,7 @@
     &:not(.back)::after {
       @extend %chevron-properties;
       margin-left: $ouds-navigation-link-space-column-gap-arrow-medium;
-      transform: $linked-chevron-transform;
+      transform: $ouds-link-chevron-after-transform;
     }
 
     &.link-sm::after {
@@ -69,7 +76,36 @@
     &.back::before {
       @extend %chevron-properties;
       margin-right: $ouds-navigation-link-space-column-gap-arrow-medium;
+      transform: $ouds-link-chevron-before-transform;
     }
   }
+
+  &.icon-link {
+    display: inline-flex;
+    gap: $ouds-navigation-link-space-column-gap-icon-medium;
+    align-items: center;
+    backface-visibility: hidden;
+
+    > .bi {
+      flex-shrink: 0;
+      width: $ouds-navigation-link-size-icon-medium;
+      height: $ouds-navigation-link-size-icon-medium;
+      fill: currentcolor;
+      @include transition($icon-link-icon-transition);
+    }
+  }
+
+  &.icon-link-hover {
+    &:hover,
+    &:focus-visible {
+      > .bi {
+        transform: var(--#{$prefix}icon-link-transform, $icon-link-icon-transform);
+      }
+    }
+  }
+}
+
+.visited-links a:not(.icon-link):not(.link-chevron):visited {
+  color: var(--#{$prefix}color-action-visited);
 }
 

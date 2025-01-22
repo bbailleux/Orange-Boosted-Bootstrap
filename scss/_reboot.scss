@@ -352,13 +352,19 @@ sup { top: -.5em; }
 a {
   --#{$prefix}link-color-rgb: #{$ouds-navigation-link-color-content-enabled}; // OUDS mod
 
+  font-weight: $link-font-weight;
   color: var(--#{$prefix}link-color-rgb);
   text-decoration: $link-decoration;
 
-  &:hover,
+  &:hover {
+    --#{$prefix}link-color-rgb: #{$ouds-navigation-link-color-content-hover};
+
+    text-decoration: $link-hover-decoration;
+  }
+
   &:focus-visible,
   &:focus[data-focus-visible-added] {
-    --#{$prefix}link-color-rgb: #{$ouds-navigation-link-color-content-hover};
+    --#{$prefix}link-color-rgb: #{$ouds-navigation-link-color-content-focus};
 
     text-decoration: $link-hover-decoration;
   }
