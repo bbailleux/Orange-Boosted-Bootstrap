@@ -18,7 +18,7 @@ Visited links don't have a specific style by default. The `:visited` status can 
 <div><a class="link" href="#">This is an example of a base link</a></div>
 <div><a class="link link-sm" href="#">This is an example of a small base link</a></div>
 <div class="visited-links">
-  <a href="." class="link" href="#">This is an example of a visited link</a>
+  <a class="link" href=".">This is an example of a visited link</a>
 </div>
 {{< /example >}}
 
