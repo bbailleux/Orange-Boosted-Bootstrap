@@ -5,51 +5,54 @@
 %chevron-properties {
   display: inline-flex;
   align-items: center;
-  width: $ouds-navigation-link-size-icon-medium;
-  height: $ouds-navigation-link-size-icon-medium;
+  width: $ouds-link-size-icon-medium;
+  min-width: $ouds-link-size-icon-medium;
   content: "";
-  background-color: $ouds-navigation-link-color-arrow-enabled;
-  mask: var(--#{$prefix}chevron-icon) no-repeat;
+  background-color: $ouds-link-color-arrow-enabled;
+  mask: var(--#{$prefix}chevron-icon) center no-repeat;
+  mask-size: $ouds-link-size-icon-medium;
 }
 
 .link,
 .link-chevron,
 .icon-link {
   // scss-docs-start link-css-vars
-  --#{$prefix}link-color-rgb: #{$ouds-navigation-link-color-content-enabled};
+  --#{$prefix}link-color-rgb: #{$ouds-link-color-content-enabled};
   // scss-docs-end link-css-vars
 
   @include get-font-size("label-large");
   display: inline-flex;
-  min-width: $ouds-navigation-link-size-min-width-medium;
-  min-height: $ouds-navigation-link-size-min-height-medium;
-  padding: $ouds-navigation-link-space-padding-block $ouds-navigation-link-space-padding-inline;
+  min-width: $ouds-link-size-min-width-medium;
+  min-height: $ouds-link-size-min-height-medium;
+  padding: $ouds-link-space-padding-block $ouds-link-space-padding-inline;
   font-weight: $link-font-weight;
   color: var(--#{$prefix}link-color-rgb);
   text-decoration: $link-decoration;// OUDS mod
 
   &:hover {
-    --#{$prefix}link-color-rgb: #{$ouds-navigation-link-color-content-hover};
+    --#{$prefix}link-color-rgb: #{$ouds-link-color-content-hover};
 
     text-decoration: $link-hover-decoration;
   }
 
   &:focus-visible,
   &:focus[data-focus-visible-added] {
-    --#{$prefix}link-color-rgb: #{$ouds-navigation-link-color-content-focus};
+    --#{$prefix}link-color-rgb: #{$ouds-link-color-content-focus};
 
     text-decoration: $link-hover-decoration;
   }
 
   &:active {
-    --#{$prefix}link-color-rgb: #{$ouds-navigation-link-color-content-pressed};
+    --#{$prefix}link-color-rgb: #{$ouds-link-color-content-pressed};
   }
 
   &.link-sm{
     @include get-font-size("label-medium");
-    min-width: $ouds-navigation-link-size-min-width-small;
-    min-height: $ouds-navigation-link-size-min-height-small;
+    min-width: $ouds-link-size-min-width-small;
+    min-height: $ouds-link-size-min-height-small;
   }
+
+  // OUDS Chevron links
 
   &.link-chevron {
 
@@ -57,41 +60,69 @@
       text-decoration: none;
     }
 
+    // Chevron right is the default position if no class '.back' is added
     &:not(.back)::after {
       @extend %chevron-properties;
-      margin-left: $ouds-navigation-link-space-column-gap-arrow-medium;
+      margin-left: $ouds-link-space-column-gap-arrow-medium;
       transform: $ouds-link-chevron-after-transform;
     }
 
+    // Chevron small size
+    &.link-sm::after,
+    &.link-sm::before {
+      width: $ouds-link-size-icon-small;
+      min-width: $ouds-link-size-icon-small;
+      mask-size: $ouds-link-size-icon-small;
+    }
+
+    // Chevron right margin for small size
     &.link-sm::after {
-      width: $ouds-navigation-link-size-icon-small;
-      height: $ouds-navigation-link-size-icon-small;
-      margin-left: $ouds-navigation-link-space-column-gap-arrow-small;
+      margin-left: $ouds-link-space-column-gap-arrow-small;
     }
 
-    &[aria-disabled="true"]::after {
-      background-color: var(--#{$prefix}color-action-disabled);
-    }
-
+    // Chevron is set on left side when class '.back' is added
     &.back::before {
       @extend %chevron-properties;
-      margin-right: $ouds-navigation-link-space-column-gap-arrow-medium;
-      transform: $ouds-link-chevron-before-transform;
+      margin-right: $ouds-link-space-column-gap-arrow-medium;
+    }
+
+    // Chevron left margin for small size
+    &.link-sm::before {
+      margin-right: $ouds-link-space-column-gap-arrow-small;
+    }
+
+    // When link is disabled, chevron is styled accordingly
+    &[aria-disabled="true"] {
+      &::after,
+      &::before {
+        background-color: var(--#{$prefix}color-action-disabled);
+      }
     }
   }
 
+  // OUDS Icon links
+
   &.icon-link {
     display: inline-flex;
-    gap: $ouds-navigation-link-space-column-gap-icon-medium;
+    gap: $ouds-link-space-column-gap-icon-medium;
     align-items: center;
     backface-visibility: hidden;
 
     > .bi {
       flex-shrink: 0;
-      width: $ouds-navigation-link-size-icon-medium;
-      height: $ouds-navigation-link-size-icon-medium;
+      width: $ouds-link-size-icon-medium;
+      height: $ouds-link-size-icon-medium;
       fill: currentcolor;
       @include transition($icon-link-icon-transition);
+    }
+
+    &.link-sm {
+      gap: $ouds-link-space-column-gap-icon-small;
+
+      > .bi {
+        width: $ouds-link-size-icon-small;
+        height: $ouds-link-size-icon-small;
+      }
     }
   }
 

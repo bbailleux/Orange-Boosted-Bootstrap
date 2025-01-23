@@ -77,4 +77,4 @@ This helper should be used carefully because the rendering provided in the follo
 
 ### Component tokens
 
-{{< scss-docs name="ouds-component-navigation" file="scss/tokens/_component.scss" >}}
+{{< scss-docs name="ouds-component-link" file="scss/tokens/_component.scss" >}}
