@@ -9,27 +9,24 @@ toc: true
 ---
 
 {{< callout info >}}
-You can find here the [OUDS Button guidelines](https://unified-design-system.orange.com/472794e18/p/48a788-button).
+You can find here the [OUDS Button design guidelines](https://unified-design-system.orange.com/472794e18/p/48a788-button).
 {{< /callout >}}
 
 ## Base class
 
-OUDS Web has a base `.btn` class that sets up basic styles such as padding and content alignment. By default, `.btn`
-controls have a transparent border and background color, but still defines basic focus and hover styles.
+OUDS Web has a base `.btn` class that sets up basic styles such as padding and content alignment. By default, `.btn` controls have a transparent border and background color, but still defines basic focus and hover styles.
 
 {{< example >}}
 <button type="button" class="btn">Base class</button>
 {{< /example >}}
 
-The `.btn` class is intended to be used in conjunction with our button variants, or to serve as a basis for your own
-custom styles.
+The `.btn` class is intended to be used in conjunction with our button variants, or to serve as a basis for your own custom styles.
 
 <!-- OUDS mod: no warning callout about `:focus`/`:focus-visible` since OUDS Web provides a default visible focus for each focusable element -->
 
 ## Standard variants
 
-OUDS Web includes several button variants, each serving its own semantic purpose, with a few extras thrown in for more
-control.
+OUDS Web includes several button variants, each serving its own semantic purpose, with a few extras thrown in for more control.
 
 {{< example >}}
 <button type="button" class="btn btn-default">Default</button>
@@ -57,8 +54,7 @@ control.
 
 ## Variants on colored background
 
-OUDS Web offers a few variations to use on colored backgrounds (meaning neither primary, nor secondary, nor tertiary,
-nor emphasized backgrounds). Their accessibility (readability) is ensured by suitable semi-opaque backgrounds.
+OUDS Web offers a few variations to use on colored backgrounds (meaning neither primary, nor secondary, nor tertiary, nor emphasized backgrounds). Their accessibility (readability) is ensured by suitable semi-opaque backgrounds.
 
 {{< callout warning >}}
 **Heads up!**
@@ -91,23 +87,18 @@ nor emphasized backgrounds). Their accessibility (readability) is ensured by sui
 
 ### Text and icon
 
-The recommended way of using an icon in a button is an embedded SVG<!-- ({{< docsref "/extend/icons" >}}) -->. You need
-to:
+The recommended way of using an icon in a button is an embedded SVG<!-- ({{< docsref "/extend/icons" >}}) -->. You need to:
 
 - set its dimensions to default `1rem` size, the icon will adapt automatically,
 - fill it using `currentColor` to respect button color scheme.
 
-You don't need to apply `.me-shorter` class on the icon to get consistent spacing, as the margin is already handled by
-OUDS Web.
+You don't need to apply `.me-shorter` class on the icon to get consistent spacing, as the margin is already handled by OUDS Web.
 
-Please note that if you experience a problem with a cropped SVG, we recommend using the `.overflow-visible` utility on
-the SVG to fix its rendering.
+Please note that if you experience a problem with a cropped SVG, we recommend using the `.overflow-visible` utility on the SVG to fix its rendering.
 
-If really needed, you can use a font icon associated the `.icon` class to set correct parameters for the `font-size` and
-`line-height`.
+If really needed, you can use a font icon associated the `.icon` class to set correct parameters for the `font-size` and `line-height`.
 
-We strongly advise not using a `<img>`, in particular because the icon will not benefit from dynamic color changes on
-states (hover, focus, active) and the color mode system won't work.
+We strongly advise not using a `<img>`, in particular because the icon will not benefit from dynamic color changes on states (hover, focus, active) and the color mode system won't work.
 
 {{< example class="p-none">}}
 <div class="p-tall">
@@ -172,8 +163,7 @@ states (hover, focus, active) and the color mode system won't work.
 
 ### Icon only
 
-Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sure to provide an accessible name to your
-button, either using a `.visually-hidden` content or a `aria-label` attribute.
+Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sure to provide an accessible name to your button, either using a `.visually-hidden` content or a `aria-label` attribute.
 
 {{< example class="p-none">}}
 <div class="p-tall">
@@ -241,17 +231,13 @@ button, either using a `.visually-hidden` content or a `aria-label` attribute.
 
 ## Disable text wrapping
 
-If you don't want the button text to wrap, you can add the `.text-nowrap` class to the button. In Sass, you can set
-`$btn-white-space: nowrap` to disable text wrapping for each button.
+If you don't want the button text to wrap, you can add the `.text-nowrap` class to the button. In Sass, you can set `$btn-white-space: nowrap` to disable text wrapping for each button.
 
 ## HTML button tags
 
-The `.btn` classes are designed to be used with the `<button>` element. However, you can also use these classes on `<a>`
-or `<input>` elements (though some browsers may apply a slightly different rendering).
+The `.btn` classes are designed to be used with the `<button>` element. However, you can also use these classes on `<a>` or `<input>` elements (though some browsers may apply a slightly different rendering).
 
-When using button classes on `<a>` elements that are used to trigger in-page functionality (like collapsing content),
-rather than linking to new pages or sections within the current page, these links should be given a `role="button"` to
-appropriately convey their purpose to assistive technologies such as screen readers.
+When using button classes on `<a>` elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a `role="button"` to appropriately convey their purpose to assistive technologies such as screen readers.
 
 {{< example >}}
 <a class="btn btn-default" href="#" role="button">Link</a>
@@ -265,8 +251,7 @@ appropriately convey their purpose to assistive technologies such as screen read
 
 {{< bootstrap-compatibility >}}
 
-In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the
-`.btn-outline-*` ones to remove all background images and colors on any button.
+In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the `.btn-outline-*` ones to remove all background images and colors on any button.
 
 {{< example >}}
 {{< buttons.inline >}}
@@ -282,8 +267,7 @@ In need of a button, but not the hefty background colors they bring? Replace the
 
 ## Disabled state
 
-Make buttons look inactive by adding the `disabled` boolean attribute to any `<button>` element. Disabled buttons have
-`pointer-events: none` applied to, preventing hover and active states from triggering.
+Make buttons look inactive by adding the `disabled` boolean attribute to any `<button>` element. Disabled buttons have `pointer-events: none` applied to, preventing hover and active states from triggering.
 
 <!--Boosted mod: no outline buttons-->
 {{< example class="p-none" >}}
@@ -305,11 +289,9 @@ Make buttons look inactive by adding the `disabled` boolean attribute to any `<b
 
 Disabled buttons using the `<a>` element behave a bit different:
 
-- `<a>`s don't support the `disabled` attribute, so you must add the `.disabled` class to make it visually appear
-  disabled.
+- `<a>`s don't support the `disabled` attribute, so you must add the `.disabled` class to make it visually appear disabled.
 - Some future-friendly styles are included to disable all `pointer-events` on anchor buttons.
-- Disabled buttons using `<a>` should include the `aria-disabled="true"` attribute to indicate the state of the element
-  to assistive technologies.
+- Disabled buttons using `<a>` should include the `aria-disabled="true"` attribute to indicate the state of the element to assistive technologies.
 - Disabled buttons using `<a>` *should not* include the `href` attribute.
 
 {{< example class="p-none" >}}
@@ -327,13 +309,7 @@ Disabled buttons using the `<a>` element behave a bit different:
 
 ### Link functionality caveat
 
-To cover cases where you have to keep the `href` attribute on a disabled link, the `.disabled` class uses
-`pointer-events: none` to try to disable the link functionality of `<a>`s. Note that this CSS property is not yet
-standardized for HTML, but all modern browsers support it. In addition, even in browsers that do support
-`pointer-events: none`, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of
-assistive technologies will still be able to activate these links. So to be safe, in addition to `aria-disabled="true"`,
-also include a `tabindex="-1"` attribute on these links to prevent them from receiving keyboard focus, and use custom
-JavaScript to disable their functionality altogether.
+To cover cases where you have to keep the `href` attribute on a disabled link, the `.disabled` class uses `pointer-events: none` to try to disable the link functionality of `<a>`s. Note that this CSS property is not yet standardized for HTML, but all modern browsers support it. In addition, even in browsers that do support `pointer-events: none`, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, in addition to `aria-disabled="true"`, also include a `tabindex="-1"` attribute on these links to prevent them from receiving keyboard focus, and use custom JavaScript to disable their functionality altogether.
 
 {{< example >}}
 <a href="#" class="btn btn-default disabled" tabindex="-1" role="button" aria-disabled="true">Default link</a>
@@ -344,13 +320,11 @@ JavaScript to disable their functionality altogether.
 
 ## Loading state
 
-The loading state of a button indicates that an action is currently processing or taking place. This state provides
-feedback to users, enhancing user experience.
+The loading state of a button indicates that an action is currently processing or taking place. This state provides feedback to users, enhancing user experience.
 
 To make an animated loading state button, you will add in your standard button:
 - An animated `<svg>`: the animation will differ whether the loading time is known or not.
-- A status message `<span>`: the message must be updated regularly in order to be vocalized by screen readers; if
-  the loading time is defined, you should indicate the progression.
+- A status message `<span>`: the message must be updated regularly in order to be vocalized by screen readers; if the loading time is defined, you should indicate the progression.
 
 For example, before loading, your button could be like this:
 
@@ -365,8 +339,7 @@ For example, before loading, your button could be like this:
 {{< /example >}}
 
 When the loading starts, you will have to:
-- Add the class `.loading-indeterminate` (for an unknown loading time) or `.loading-determinate` (for a known
-  loading time) to the button to provide the appropriate styles and animation.
+- Add the class `.loading-indeterminate` (for an unknown loading time) or `.loading-determinate` (for a known loading time) to the button to provide the appropriate styles and animation.
 - Add the `disabled` attribute to the button to avoid any unwanted interactions.
 - Remove the `.d-none` from the animated `<svg>` and the status message `<span>`.
 - Update regularly the status message `<span>` containing the loading message.
@@ -499,8 +472,7 @@ See the buttons in action in our [loading buttons live example]({{< docsref "/ex
 
 ## Block buttons
 
-Create responsive stacks of full-width, "block buttons" with a mix of our display and gap utilities. By using utilities
-instead of button-specific classes, we have much greater control over spacing, alignment, and responsive behaviors.
+Create responsive stacks of full-width, "block buttons" with a mix of our display and gap utilities. By using utilities instead of button-specific classes, we have much greater control over spacing, alignment, and responsive behaviors.
 
 Please note that these **full-width** buttons should not be used on desktop screens. <!-- OUDS mod -->
 
@@ -511,9 +483,7 @@ Please note that these **full-width** buttons should not be used on desktop scre
 </div>
 {{< /example >}}
 
-Here we create a responsive variation, starting with vertically stacked buttons until the `md` breakpoint, where
-`.d-md-block` replaces the `.d-grid` class, thus nullifying the `gap-short` utility. Resize your browser to see them
-change.
+Here we create a responsive variation, starting with vertically stacked buttons until the `md` breakpoint, where `.d-md-block` replaces the `.d-grid` class, thus nullifying the `gap-short` utility. Resize your browser to see them change.
 
 {{< example >}}
 <div class="d-grid gap-short d-md-block">
@@ -522,8 +492,7 @@ change.
 </div>
 {{< /example >}}
 
-You can adjust the width of your block buttons with grid column width classes. For example, for a half-width "block
-button", use `.col-6`. Center it horizontally with `.mx-auto`, too.
+You can adjust the width of your block buttons with grid column width classes. For example, for a half-width "block button", use `.col-6`. Center it horizontally with `.mx-auto`, too.
 
 {{< example >}}
 <div class="d-grid gap-short col-6 mx-auto">
@@ -532,9 +501,7 @@ button", use `.col-6`. Center it horizontally with `.mx-auto`, too.
 </div>
 {{< /example >}}
 
-Additional utilities can be used to adjust the alignment of buttons when horizontal. Here we've taken our previous
-responsive example and added some flex utilities and a margin utility on the button to right-align the buttons when
-they're no longer stacked.
+Additional utilities can be used to adjust the alignment of buttons when horizontal. Here we've taken our previous responsive example and added some flex utilities and a margin utility on the button to right-align the buttons when they're no longer stacked.
 
 {{< example >}}
 <div class="d-grid gap-short d-md-flex justify-content-md-end">
@@ -549,14 +516,12 @@ they're no longer stacked.
 
 ### Variables
 
-As part of OUDS Web's evolving CSS variables approach, buttons now use local CSS variables on `.btn` for enhanced
-real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part of OUDS Web's evolving CSS variables approach, buttons now use local CSS variables on `.btn` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="btn-css-vars" file="scss/_buttons.scss" >}}
 
 <!--Boosted mod: no outline variant-->
-Each `.btn-*` modifier class updates the appropriate CSS variables to minimize additional CSS rules with our
-`button-variant()` and `button-size()` mixins.
+Each `.btn-*` modifier class updates the appropriate CSS variables to minimize additional CSS rules with our `button-variant()` and `button-size()` mixins.
 
 <!-- OUDS mod: no custom `.btn-*` modifier class-->
 
@@ -580,8 +545,7 @@ There are four mixins for buttons: button and button outline variant mixins (bot
 
 ### Sass loops
 
-Button variants (for regular and outline buttons) use their respective mixins with our `$theme-colors` map to generate
-the modifier classes in `scss/_buttons.scss`.
+Button variants (for regular and outline buttons) use their respective mixins with our `$theme-colors` map to generate the modifier classes in `scss/_buttons.scss`.
 
 {{< scss-docs name="btn-variant-loops" file="scss/_buttons.scss" >}}
 

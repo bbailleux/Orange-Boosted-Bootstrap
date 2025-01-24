@@ -172,6 +172,7 @@
     border-width: var(--#{$prefix}btn-interaction-border-width);
 
     &.btn-default {
+      --#{$prefix}btn-border-width: #{$ouds-button-border-width-default-interaction};
       --#{$prefix}btn-color: #{$ouds-button-color-content-default-loading};
       --#{$prefix}btn-bg: #{$ouds-button-color-bg-default-loading};
       --#{$prefix}btn-border-color: #{$ouds-button-color-border-default-loading};
