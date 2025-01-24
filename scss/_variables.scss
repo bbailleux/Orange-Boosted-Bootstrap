@@ -500,7 +500,7 @@ $stretched-link-pseudo-element:           after !default;
 $stretched-link-z-index:                  1 !default;
 
 // OUDS mod
-$ouds-link-chevron-after-transform:       rotate(.5turn) !default;
+$ouds-link-chevron-after-transform:       rotate(.5turn) translateY(1px) !default;
 // End mod
 
 // Icon links

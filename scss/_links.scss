@@ -3,10 +3,11 @@
 //
 
 %chevron-properties {
-  display: inline-flex;
-  align-items: center;
+  display: inline-block;
   width: $ouds-link-size-icon-medium;
   min-width: $ouds-link-size-icon-medium;
+  height: $ouds-link-size-icon-medium;
+  vertical-align: middle;
   content: "";
   background-color: $ouds-link-color-arrow-enabled;
   mask: var(--#{$prefix}chevron-icon) center no-repeat;
@@ -21,7 +22,7 @@
   // scss-docs-end link-css-vars
 
   @include get-font-size("label-large");
-  display: inline-flex;
+  display: inline-block;
   min-width: $ouds-link-size-min-width-medium;
   min-height: $ouds-link-size-min-height-medium;
   padding: $ouds-link-space-padding-block $ouds-link-space-padding-inline;
@@ -81,6 +82,13 @@
     }
 
     // Chevron is set on left side when class '.back' is added
+
+    // Left chevron is aligned with the center of the text link on multiple lines
+    &.back {
+      display: inline-flex;
+      align-items: center;
+    }
+
     &.back::before {
       @extend %chevron-properties;
       margin-right: $ouds-link-space-column-gap-arrow-medium;
