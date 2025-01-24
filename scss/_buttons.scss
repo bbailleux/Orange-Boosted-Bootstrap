@@ -24,7 +24,7 @@
   --#{$prefix}btn-box-shadow: #{$btn-box-shadow};
   --#{$prefix}btn-disabled-opacity: #{$btn-disabled-opacity}; // TODO to check
   --#{$prefix}btn-focus-box-shadow: 0 0 0 #{$btn-focus-width} var(--#{$prefix}btn-focus-shadow-rgb); // OUDS mod
-  --#{$prefix}icon-spacing: #{$btn-icon-padding-left}; // OUDS mod TODO to check, maybe $btn-icon-padding-x?
+  --#{$prefix}btn-icon-spacing: #{$btn-icon-padding-left}; // OUDS mod TODO to check, maybe $btn-icon-padding-x?
   --#{$prefix}btn-loading-time: 2s; // OUDS mod
   --#{$prefix}btn-focus-bg: var(--#{$prefix}btn-hover-bg); // OUDS mod
   --#{$prefix}btn-focus-border-color: var(--#{$prefix}btn-hover-border-color); // OUDS mod
