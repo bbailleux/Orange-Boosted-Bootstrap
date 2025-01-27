@@ -59,20 +59,12 @@ Take a regular `<a>` element, add `.icon-link`, and insert an icon on either the
 {{< bootstrap-compatibility >}}
 Add `.icon-link-hover` to move the icon to the right on hover.
 
-<details>
-<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
-<br>
-{{< design-callout-alert >}}
-This helper should be used carefully because the rendering provided in the following examples does not respect the Orange Design System specifications. But still, this helper could help in some cases to build specific ues cases or other reusable components.
-{{< /design-callout-alert >}}
-
 {{< example >}}
 <a class="icon-link icon-link-hover" href="#">
   Icon link
   <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
 </a>
 {{< /example >}}
-</details>
 {{< /bootstrap-compatibility >}}
 
 ### Component tokens

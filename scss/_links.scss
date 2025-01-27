@@ -29,6 +29,7 @@
   font-weight: $link-font-weight;
   color: var(--#{$prefix}link-color-rgb);
   text-decoration: $link-decoration;// OUDS mod
+  text-wrap: pretty;
 
   &:hover {
     --#{$prefix}link-color-rgb: #{$ouds-link-color-content-hover};
