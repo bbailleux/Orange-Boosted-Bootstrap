@@ -105,18 +105,18 @@ Here are some real life examples of these classes:
 </button>
 {{< /example >}}
 
-<!--You can use these classes with existing components to create new ones. Remember that you can extend its functionality by adding entries to the `$position-values` variable.
+<!-- You can use these classes with existing components to create new ones. Remember that you can extend its functionality by adding entries to the `$position-values` variable.
 
 {{< example class="bd-example-position-examples" >}}
 <div class="position-relative m-tallest">
   <div class="progress" role="progressbar" aria-label="Progress" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="height: 1px;">
     <div class="progress-bar" style="width: 50%"></div>
   </div>
-  <button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-default rounded-pill" style="width: 2rem; height:2rem;">1</button>
-  <button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-default rounded-pill" style="width: 2rem; height:2rem;">2</button>
-  <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-strong rounded-pill" style="width: 2rem; height:2rem;">3</button>
+  <button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-strong rounded-pill" style="width: 2rem; height:2rem;">1</button>
+  <button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-strong rounded-pill" style="width: 2rem; height:2rem;">2</button>
+  <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-default rounded-pill" style="width: 2rem; height:2rem;">3</button>
 </div>
-{{< /example >}}-->
+{{< /example >}} -->
 
 ## CSS
 
