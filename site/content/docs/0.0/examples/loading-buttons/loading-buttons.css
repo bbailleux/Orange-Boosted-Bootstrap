@@ -11,5 +11,5 @@
 }
 
 .accordion-collapse {
-  background-color: #f4f4f4;
+  background-color: var(--bs-color-bg-secondary);
 }

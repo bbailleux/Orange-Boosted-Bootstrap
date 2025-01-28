@@ -86,7 +86,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
   - `.btn-primary` and `.btn-dark` will look as `.btn-strong`
   - `.btn-secondary` and `.btn-success` will look as `.btn-default`
   - `.btn-danger` and `.btn-warning` will look as `.btn-negative`
-  - `.btn-info`and `.btn-light` will look as `.btn-minimal`
+  - `.btn-info` and `.btn-light` will look as `.btn-minimal`
 - <span class="badge text-bg-status-negative-emphasized">Breaking</span> `.btn-no-outline` has been removed. You can use `.btn-minimal` instead.
 - <span class="badge text-bg-status-negative-emphasized">Breaking</span> `.btn-outline-*` have been removed. You can still have them using `$enable-bootstrap-compatibility`. They all look like `.btn-default`.
 - <span class="badge text-bg-status-warning-emphasized">Warning</span> `.btn-sm` and `.btn-lg` have been removed.

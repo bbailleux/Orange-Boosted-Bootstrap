@@ -17,7 +17,7 @@
     updateStatusMessageCall1 = setInterval(() => {
       statusMessage1.innerHTML = `${statusMessage1.innerHTML}.`
     }, 1000)
-    // stop loading after 10 secondes for this demo
+    // stop loading after 5 secondes for this demo
     setTimeout(() => {
       clearInterval(updateStatusMessageCall1)
       statusMessage1.innerHTML = 'Downloading file 1 is complete'

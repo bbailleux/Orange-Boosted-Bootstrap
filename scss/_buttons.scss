@@ -4,8 +4,8 @@
 
 .btn {
   // scss-docs-start btn-css-vars
-  --#{$prefix}btn-padding-start: #{$btn-padding-x};
-  --#{$prefix}btn-padding-end: #{$btn-padding-x};
+  --#{$prefix}btn-padding-start: #{$btn-padding-x}; // OUDS mod
+  --#{$prefix}btn-padding-end: #{$btn-padding-x}; // OUDS mod
   --#{$prefix}btn-padding-y: #{$btn-padding-y};
   --#{$prefix}btn-min-width: #{$ouds-button-size-min-width}; // OUDS mod
   --#{$prefix}btn-min-height: #{$ouds-button-size-min-height}; // OUDS mod
